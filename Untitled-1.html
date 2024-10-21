@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Резюме Программиста</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffe6f2; /* Розоватый фон */
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        transition: background-color 0.5s, color 0.5s;
+      }
+      .dark-mode {
+        background-color: #333;
+        color: white;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        transition: background-color 0.5s, color 0.5s;
+      }
+      .dark-mode .container {
+        background-color: #444; /* Темный фон для контейнера */
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      h1,
+      h2 {
+        margin-bottom: 10px;
+      }
+      hr {
+        border: 1px solid #ff99cc; /* Розовая линия */
+        margin: 20px 0;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 15px;
+        cursor: pointer;
+        background-color: #ff66b3; /* Розовая кнопка */
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: #ff3385; /* Темнее при наведении */
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .skill {
+        background-color: #ffccff; /* Светлая розовая карточка */
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .dark-mode .skill {
+        background-color: #555; /* Темный фон для карточек навыков */
+        color: white; /* Белый текст для карточек навыков */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Имя Фамилия</h1>
+      <img src="3.jpg" alt="Моя фотография" />
+
+      <hr />
+
+      <h2>Обо мне</h2>
+      <p>
+        Я программист с опытом работы в веб-разработке, GameDev и интересом к
+        новым технологиям Математика моя отдушина.
+      </p>
+
+      <hr />
+
+      <h2>Навыки</h2>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Python</div>
+        <div class="skill">С++</div>
+      </div>
+
+      <hr />
+
+      <h2>Опыт работы</h2>
+      <p>Создаю свои проекты(2022 - настоящее время)</p>
+      <p>Разработка веб-приложений.</p>
+
+      <hr />
+
+      <h2>Образование</h2>
+      <p>Бакалавр ПМИ 1 курс, НИУ ВШЭ СПБ (2024 - настоящее время)</p>
+
+      <hr />
+
+      <button id="theme-toggle">Сменить тему</button>
+    </div>
+
+    <script>
+      const button = document.getElementById("theme-toggle");
+      button.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        button.textContent = document.body.classList.contains("dark-mode")
+          ? "Сменить на светлую тему"
+          : "Сменить на темную тему";
+      });
+    </script>
+  </body>
+</html>
